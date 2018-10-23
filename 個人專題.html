@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>錦芳餐車</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            
+        }
+
+        .bg-img {
+
+            background-image: url('https://pic.pimg.tw/yuchulien/1498909343-3412898113.jpg?v=1498909346');
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+        }
+
+
+
+        .logo {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl-CVIB4j8bwqf0U3tvGqtMrrYVYqdTNmN1l9MJUninA8pcUI");
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .contain {
+
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+
+
+
+        .nav {
+
+            text-decoration: none;
+            font-size: 37px;
+            font-family: DFKai-sb;
+            color: green;
+
+        }
+
+
+
+        .clearfix {
+            clear: both;
+        }
+
+        .word {
+            background-color: orange;
+            color: black;
+            font-size: 30px;
+            font-family: DFKai-sb;
+            border-radius: 20px;
+        }
+
+        .words {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.6;
+        }
+
+        #wordA {
+            margin-left: -70px;
+
+        }
+
+        #wordB {
+            margin-left: -56px;
+        }
+
+        .historyALL {
+            height: 80vh;
+            width: 80vh;
+            margin-top: 20vh;
+        }
+
+        .history-title {
+            font-size: 50px;
+            color: brown;
+            font-weight: bolder
+        }
+
+        .history-bg {
+            background-image: url('https://video.nextmag.com.tw/photo/2016/04/06/20160406ftlwc02%20_OP_1_CP__1459953114783_543163_ver1.1.jpg');
+            height: 80vh;
+            width: 80vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        .history-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .history {
+            font-size: 31px;
+            text-indent: 2em;
+            letter-spacing: 1em;
+            font-family: DFKai-sb;
+            line-height: 37px;
+        }
+
+        .backtotop {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 30px;
+            opacity: 0.3;
+        }
+
+        .cargo-title {
+            font-size: 30px;
+            letter-spacing: 1px;
+            background-color: aqua;
+            border: 5px dashed palevioletred;
+            border-bottom: 0;
+            border-radius: 24px;
+        }
+
+        .cargo-flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cargo {
+            width: 14vh;
+            height: 47vh;
+            /* background-color: red; */
+            border: 10px double blue;
+            border-bottom: 0
+        }
+        .rice {
+            background-image: url('/element/飯團含背景-16.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+
+        .menu {
+
+            display: flex;
+            justify-content: center;
+            margin: 10vh 12vh 0
+        }
+
+        .coin {
+            width: 14vh;
+            height: 14vh;
+            /* background-color: blue; */
+            border: 10px double rgb(206, 205, 205);
+            border-top: 0
+        }
+
+        .coins {
+            display: flex;
+            justify-content: center;
+            margin: 0 12vh 0
+        }
+
+        .link-logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        img {
+            height: 125px;
+            width: 125px;
+        }
+
+        .address {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold
+        }
+
+        .phone {
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+            font-weight: bolder
+        }
+
+        .contain-phone {
+            margin-top: 20px;
+            background-color: aquamarine
+        }
+
+        .cell-phone {
+            margin-top: 10px;
+            background-color: chartreuse
+        }
+
+        .tel-phone {
+            background-color: aqua
+        }
+
+        .web-maps {
+            display: flex;
+            justify-content: center;
+        }
+
+        .bottom {
+            text-align: right
+        }
+
+        #attractions {
+            margin-top: 30px
+        }
+
+        .attractions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .attraction-moutain img {
+            width: 600px;
+            height: 600px;
+
+        }
+
+        .attractioin-valley img {
+            width: 600px;
+            height: 600px;
+
+        }
+
+        .attraction-market img {
+            width: 600px;
+            height: 600px;
+
+        }
+
+        .attraction-moutain {
+            width: 600px;
+            height: 600px;
+            margin: 10px
+        }
+
+        .attraction-words {
+            width: 600px;
+            height: 600px;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: goldenrod
+        }
+
+        .attractioin-valley {
+            width: 600px;
+            height: 600px;
+            margin: 10px
+        }
+
+        .attraction-market {
+            width: 600px;
+            height: 600px;
+            margin: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="contain">
+
+            <div class="logo"></div>
+            <div class="nav"><a href="#history-section">關於我們</a></div>
+            <div class="nav"><a href="#cargo-flex">產品介紹</a></div>
+            <div class="nav"><a href="#container">購買方式</a></div>
+            <div class="nav"><a href="#contain-phone">連絡我們</a></div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+    <button class="backtotop"><i class="fas fa-undo"></i></button>
+    <div class="bg-img">
+
+    </div>
+    <div id="words" class="words">
+        <div><a class="word" id="wordA">健康、美味</a></div>
+        <div><a class="word" id="wordB">品質第一</a></div>
+    </div>
+    </div>
+    <div id="history-section" class="history-section">
+        <div class="historyALL">
+            <div class="history-title">店史:</div>
+            <div class="history">
+                起初，是在豐原市場當個賣三角圓的小攤販開始，一切都是如此的不可思議，當初因為家庭因素與興趣的關係，開始這一家店的起源，再來有了一筆小錢，訂製了自己的餐車，又過了許多年，達到了自己的標準，成就了今天的店家，一切的一切都是如此的不可思議。</div>
+        </div>
+        <div class="history-bg"></div>
+    </div>
+
+    <div id="cargo-flex" class="cargo-flex"><a class="cargo-title">櫥櫃展示</a></div>
+    <div class="menu">
+        <div class="rice cargo"></div>
+        <div class="pig cargo"></div>
+        <div class="blacktea cargo"></div>
+        <div class="Soy milk cargo"></div>
+    </div>
+    <div class="coins">
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+    </div>
+    <div id="attractions">
+
+        <div class="attractions">
+            <div class="attraction-moutain
+"><img src="https://cmeyy.com/wp-content/uploads/2017/11/1512034916-86548a28dc3388fb739a7631475ecd9f.jpg"
+                    alt=""></div>
+            <div class="attraction-words">熱搜景點</div>
+        </div>
+        <div class="attractions">
+            <div class="attractioin-valley
+"><img src="https://exp.cdn-hotels.com/hotels/10000000/9990000/9988900/9988851/9988851_6_z.jpg"
+                    alt=""></div>
+            <div class="attraction-market"><img src="https://www.taichung.travel/Utility/DisplayImage?id=12761" alt=""></div>
+        </div>
+    </div>
+    <div id="container" class="container">
+        <div class="row ">
+            <div class="col-sm ">
+                <div class="link-logo">
+                    <a href="https://www.facebook.com/profile.php?id=100012511808330"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhV7p_Q9xUbw6ty2q9rW28dTPL3Wayz9_uwrYQ2xOyLgphLci"
+                        alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="data:image/png;base64,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"
+                        alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="https://icon2.kisspng.com/20171220/ypq/instagram-png-icon-5a3aafc62af570.341760101513795526176.jpg"
+                        alt=""></a>
+                    <a href="https://shopee.tw/00larry00"><img src="https://thumbor.blink.com.tw/N5c3a2g4Mc8zYpBkXuDngQtySSU=/500x0/https://thumbor.blink.com.tw/6N2Umm9njrlEBC6xNuRO1AkSv4I=/0x0/http://blinkimage.s3.amazonaws.com/images/discount_images/9/92/92555_9dr9g496me30gcyxjuxughsod.png"
+                        alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="google-maps" class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d227.36835515743027!2d120.72699400000002!3d24.245497000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6673f83109a6581!2z54Sh5bqX5ZCN55qE6bq15pSk5Y-K6IKJ5ZyT!5e0!3m2!1szh-TW!2stw!4v1538724320035"
+            width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="address">豐原區南陽路238號</div>
+    </div>
+    <div id="contain-phone" class="contain-phone">
+        <div class="phone tel-phone">家電:(04)25235060</div>
+        <div class="phone cell-phone">手機:0912669520</div>
+    </div>
+    <div class="web-maps">
+        <div>
+            <div><a href="#history-section">關於錦芳</a> </div>
+            <div><a href="#cargo-flex">商品展示</a></div>
+        </div>
+        <div>
+            <div><a href="#container">/相關資訊</a></div>
+            <div><a href="#google-maps">/地圖資訊</a></div>
+        </div>
+    </div>
+    <div style="text-align:center"><a href="#contain-phone">聯絡方式</a></div>
+    <div class="bottom">
+        <div>台中市豐原區南陽路238號</div>
+        <div>(日)0912669520/</div>
+        <div>(夜)04-25235060</div>
+        <div>您的安心 值得我們用心</div>
+    </div>
+
+
+
+
+    <script>
+        var nav = document.querySelector(".navbar")
+        var lastScrollTop = 0;
+        window.onload = function () {
+
+            // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+            window.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
+                var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+                if (st > lastScrollTop) {
+                    // downscroll code
+                    nav.style.display = ("none");
+                } else {
+                    // upscroll code
+                    nav.style.display = ("block");
+
+                }
+                lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+            }, false);
+        }
+        var backtotop = document.querySelector(".backtotop");
+        backtotop.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+
+</html>
